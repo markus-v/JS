@@ -1,22 +1,22 @@
-        var name = [ ];
-for (var i=0; i<5; i++)
-	{
-		name[i]=prompt('Введите имя');
+      var logins = [];
 
-	}
-
-
-var user = prompt('Введите имя пользователя.');
-
-var flag = false;
-
-for (var i=0; i<5; i++) {
-	if (user == name[i]) {
-		flag = true;
-	}
+for (var i = 0; i < 5; i++) { 
+  logins[i] = prompt('Введите имя');
 }
 
-if (flag) { alert(user + ', Вы успешно вошли')} 
-else {alert(user + ',Доступ запрещен')} 
-		
+var name = prompt('Войти в аккаунт: Введите имя');
+
+for (var i = 0; i < logins.length; i++) {
+  
+  if (name == logins[i]) {
+    message = (logins[i] + ', вы успешно вошли!');
+    
+    if (i = logins.length) continue;
+    
+  } else {
+    message = ('Пользователь не найден.')
+  }
+}
+  alert(message);
+
 		
