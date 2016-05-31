@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW 13-14 JS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="js/dist/template.js"></script>
+</head>
+<body>
+	<div class="row text-center">
+		<div class="wrapper col-md-6 col-md-offset-3">
+			<h1>Тест по программированию</h1>
+			<form action="">
+				<script type="text/template" id="test">
+					<%for(var i=0; i<data.length; i++){%>
+					<h3><%=data[i].question%></h3>
+					<% var dataQuestion=data[i].answer;%>
+					<% for (var k = 0; k < dataQuestion.length; k++) { %>
+					<div class="radio">
+						<label>
+							<input type="radio" name="<%= data[i].name %>" class="answer" value="<%= data[i].checked[k] %>"><%= data[i].answer[k] %>
+						</label>
+					</div>
+					<% }; %>
+					<%};%>	
+				</script>
+			</form>
+			<button type="submit" class="btn btn-primary btn-lg">Проверить мои результаты</button>
+		</div>
+	</div>
+	<div class="modal-window">
+		<h4 class="modal-window_text">Поздравляем, тест сдан!!!</h4>
+		<button type="button" class="modal-window_btn">Еще раз</button>
+	</div>
+	<div class="modal-background"></div>
+	<script src="js/dist/script.js"></script>
+</body>
+</html>

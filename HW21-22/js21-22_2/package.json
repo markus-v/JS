@@ -1,0 +1,10 @@
+{
+  "name": "Home_work_21-22_2",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+     "babel-preset-es2015": "^6.9.0",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

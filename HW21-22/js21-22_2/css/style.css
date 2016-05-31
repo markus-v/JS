@@ -1,0 +1,38 @@
+.modal-window{
+	display: none;
+	height: 200px;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	position: fixed;
+	z-index: 5;
+	border: 2px solid black;
+	border-radius: 20px;
+	background-color: #FFFAFA;
+}
+.modal-window_text {
+	width: 100%;
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	display: block;
+	font-size: 23px;
+	text-align: center;
+}
+.modal-window_btn{
+	position: absolute;
+	margin: 150px 162px 0;
+}
+.modal-background{
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #1F1C1C;
+	opacity: 0.5;
+}
