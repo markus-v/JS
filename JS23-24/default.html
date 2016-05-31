@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ДЗ Tech Skills JS Module 21-22</title>
+    <link href="css/module23-24.css" rel="stylesheet"/>
+    <link href="css/fontello.css"  rel="stylesheet"/>
+    <script data-main="js/module23-24" src="js/require.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items__container">
+            <ul class="items__list" />
+        </div>
+        <input type="text" class="items__input items__input--edited items__input--added"  />
+        <button class="add__button">Add</button>
+        <script type="text/template" id="items_template">
+                <% for(var i=0;i<data.length;i++) { %>
+                    <li class="items__item">
+                        <input class="items__input" type="text" value="<%= data[i].name %>" readonly="readonly"  data-guid="<%= data[i].guid %>"/>
+                        <a class="btn-delete"><i class="icon-delete" title="Delete"></i></a>
+                        <a class="btn-edit"><i class="icon-edit" title="Edit"></i></a>
+                        <a class="btn-ok hidden"><i class="icon-ok" title="Save"></i></a>
+                    </li>
+                <% } %>
+        </script>
+    </div>
+</body>
+</html>
+                    
